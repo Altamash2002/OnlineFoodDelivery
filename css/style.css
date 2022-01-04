@@ -1,0 +1,370 @@
+@font-face {
+    font-family: pacifico;
+    src: url(../fonts/Pacifico-Regular.ttf);
+}
+*{
+    font-family:'Roboto', sans-serif;
+}
+h1,h2,h3{
+    font-family: pacifico;
+}
+
+
+
+/* css Reset  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation bar  */
+
+#navbar{
+    display: flex; 
+    align-items: center;
+    position: relative;
+}
+#navbar::before{    /*something new for me */
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+/* Navigation bar :logo and image  */
+#logo{
+    margin: 10px 30px;
+}
+#logo img{
+    margin: 5px 5px;
+    height: 80px;
+    border-radius: 45px; 
+}
+
+
+/* Navigation bar :list styling  */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    display: block;
+    padding: 8px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+} 
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+}
+#home::before{
+    content: "";
+    background: url('../images/bgimages/bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 87%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+#home h1{
+    text-align: center;
+    color: rgb(251, 255, 0);
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+
+}
+
+/* services section  */
+#services{
+    margin: 34px;
+    display: flex;
+    /* background: whitesmoke; */
+    
+}
+#services .box{
+    border: 2px solid brown;
+    border-radius: 27px;
+    margin: 10px;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+    background-color: whitesmoke;
+}
+#service-container h1{
+    padding-top: 150px;
+    padding-bottom: 0px;
+    color: rgb(25, 189, 181);
+
+}
+
+/* client-section */
+#client-section{
+    height: 350px;
+}
+#client-section h1{
+    color: rgb(238, 101, 10);
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 145px;
+}
+.client-item{
+    padding: 34px 60px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../images/bgimages/bg2.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    opacity: 0.35;
+}
+/* contact section  */
+#contact{
+    position: relative;
+    padding-top: 28px;
+}
+#contact h1{
+    color: yellowgreen;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background: url('../images/bgimages/bg3.jpg') no-repeat center center/cover ;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35px;
+}
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 23px;
+    border: 1px solid  rgb(165, 250, 9);
+    font-size: 1.1rem;
+}
+#contact-box #submit{
+    width: 30%;
+    margin: auto;
+    background: rgb(80, 12, 74);
+    color: white;
+    margin-left: 230px;
+    margin-top: 10px;
+    font-size: 23px;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+/* footer  */
+footer{
+    background: rgb(2, 61, 138);
+    color: white;
+    padding: 20px 20px;
+    font-size: 18px;
+}
+
+/* utility classes  */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 1px solid white;
+    background-color: rgb(189, 11, 159);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+} 
+
+/* media query  */
+/* MAKING RESPONSIVE  */
+/* responsive ipad pro  */
+@media only screen and (max-width: 1370px){
+
+    .h-primary { 
+        font-size: 3.7rem; 
+    }
+    #home p {
+        font-size: 1.33rem;
+    }
+    #service-container h1 {
+        padding-top: 270px;
+    } 
+    #contact { 
+        padding-top: 164px;
+    }
+    footer{
+        margin-top: 102px;
+    }
+} 
+
+/* responsive for ipad  */
+@media only screen and (max-width: 770px){
+    .h-primary { 
+        font-size: 2.7rem; 
+        
+    }
+    #navbar::before {
+        width: 138%;
+    }
+    #home{
+        margin-right: -300px;
+    }
+    #home::before{
+        width: 175%;
+    }
+    #client-section::before{
+        width: 157%;
+    }
+    .client-item {
+        padding: 100px 5px;
+    }
+    #clients{
+        padding-left: 400px;
+    }
+    #client-section h1{
+        padding-left: 460px;
+    }
+    #services .box{
+        margin-left: 200px;
+        margin-right: -234px;
+    } 
+    #services{
+        flex-direction: column;
+    }
+    #service-container h1{
+        padding-left: 460px;
+    }
+    #contact h1{
+        padding-left: 460px;
+    }
+    #contact::before{
+        width: 157%;
+    }
+    #contact-box{
+        margin-right: -430px;
+    }
+    #contact-box #submit{
+        margin-left: 190px;
+        margin-bottom: -10px;
+    }
+    footer{
+        width: 151%;
+    }
+}
+
+/* responsive for mobile  */
+@media only screen and (max-width: 430px){
+    #navbar{  
+        flex-direction: column; 
+        padding-left: 440px;
+    }
+    #navbar ul li a {
+        padding: 8px 50px;
+    }
+    #home {
+        padding: 3px;
+        padding-left: 84px;
+        margin-left: 80px;
+    }
+    #home::before {
+        width: 290%;
+        top: 0;
+        height: 800px;
+    }
+    #services .box {
+        width: 166%;
+        margin-left: 136px;
+    }
+    #service-container h1{
+        padding-left: 80px;
+        margin-right: -424px;
+    } 
+    #client-section::before {
+        width: 259%;
+        height: 80%;
+    }
+    #client-section h1{
+        padding-left: 80px;
+        margin-right: -424px;
+    }
+    #clients {
+        padding-left: 460px;
+    }
+    .client-item {
+        padding: 100px 0px;
+        margin: 0px -10px; 
+    }
+    #client-section {
+        padding-left: 0px;
+    }
+    #contact h1 {
+        padding-left: 80px;
+        margin-right: -424px;
+    }
+    #contact{
+        padding-left: 0px;
+    }
+    #contact::before{
+        width: 259%;
+    }
+    #contact-box {
+        margin-right: -490px;
+        padding-left: 15px;
+    }
+    #contact-box #submit {
+        margin-left: 135px;
+    }
+    footer {
+        width: 248%;
+    }
+} 
