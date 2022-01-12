@@ -54,7 +54,7 @@ h1,h2,h3{
 }
 #navbar ul li a{
     display: block;
-    padding: 8px 30px;
+    padding: 8px 21px;
     border-radius: 30px;
     color: white;
     text-decoration: none;
@@ -68,7 +68,7 @@ h1,h2,h3{
 #home{
     display: flex;
     flex-direction: column;
-    padding: 3px 200px;
+    padding: 60px 200px;
     justify-content: center;
     align-items: center;
     height: 370px;
@@ -77,10 +77,11 @@ h1,h2,h3{
     content: "";
     background: url('../images/bgimages/bg1.jpg') no-repeat center center/cover;
     position: absolute;
-    height: 87%;
+    height: 100%;
     width: 100%;
     z-index: -1;
     opacity: 0.9;
+    top: 0px;
 }
 #home h1{
     text-align: center;
@@ -89,7 +90,7 @@ h1,h2,h3{
 #home p{
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding-bottom: 15px;
 
 }
@@ -103,10 +104,11 @@ h1,h2,h3{
 }
 #services .box{
     border: 2px solid brown;
-    border-radius: 27px;
-    margin: 10px;
-    padding: 20px;
+    border-radius: 28px;
+    margin: 2px 40px;
+    padding: 34px;
     background-color: whitesmoke;
+    margin-bottom: 20px;
 }
 #services .box img{
     height: 160px;
@@ -122,9 +124,7 @@ h1,h2,h3{
 }
 
 /* client-section */
-#client-section{
-    height: 350px;
-}
+
 #client-section h1{
     color: rgb(238, 101, 10);
 }
@@ -134,7 +134,7 @@ h1,h2,h3{
     align-items: center;
 }
 #clients img{
-    height: 145px;
+    height: 125px;
 }
 .client-item{
     padding: 34px 60px;
@@ -144,7 +144,7 @@ h1,h2,h3{
     position: absolute;
     background: url('../images/bgimages/bg2.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 50%;
+    height: 100%;
     z-index: -1;
     opacity: 0.35;
 }
@@ -191,7 +191,7 @@ h1,h2,h3{
     width: 40%;
 }
 #contact-box label{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 /* footer  */
@@ -204,7 +204,7 @@ footer{
 
 /* utility classes  */
 .h-primary{
-    font-size: 3.8rem;
+    font-size: 3.6rem;
     padding: 12px;
 }
 .h-secondary{
@@ -217,154 +217,12 @@ footer{
     background-color: rgb(189, 11, 159);
     color: white;
     margin: 17px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-radius: 20px;
     cursor: pointer;
 }
-.center{
+.center{ 
     text-align: center;
-} 
-
-/* media query  */
-/* MAKING RESPONSIVE  */
-/* responsive ipad pro  */
-@media only screen and (max-width: 1370px){
-
-    .h-primary { 
-        font-size: 3.7rem; 
-    }
-    #home p {
-        font-size: 1.33rem;
-    }
-    #service-container h1 {
-        padding-top: 270px;
-    } 
-    #contact { 
-        padding-top: 164px;
-    }
-    footer{
-        margin-top: 102px;
-    }
-} 
-
-/* responsive for ipad  */
-@media only screen and (max-width: 770px){
-    .h-primary { 
-        font-size: 2.7rem; 
-        
-    }
-    #navbar::before {
-        width: 138%;
-    }
-    #home{
-        margin-right: -300px;
-    }
-    #home::before{
-        width: 175%;
-    }
-    #client-section::before{
-        width: 157%;
-    }
-    .client-item {
-        padding: 100px 5px;
-    }
-    #clients{
-        padding-left: 400px;
-    }
-    #client-section h1{
-        padding-left: 460px;
-    }
-    #services .box{
-        margin-left: 200px;
-        margin-right: -234px;
-    } 
-    #services{
-        flex-direction: column;
-    }
-    #service-container h1{
-        padding-left: 460px;
-    }
-    #contact h1{
-        padding-left: 460px;
-    }
-    #contact::before{
-        width: 157%;
-    }
-    #contact-box{
-        margin-right: -430px;
-    }
-    #contact-box #submit{
-        margin-left: 190px;
-        margin-bottom: -10px;
-    }
-    footer{
-        width: 151%;
-    }
 }
 
-/* responsive for mobile  */
-@media only screen and (max-width: 430px){
-    #navbar{  
-        flex-direction: column; 
-        padding-left: 440px;
-    }
-    #navbar ul li a {
-        padding: 8px 50px;
-    }
-    #home {
-        padding: 3px;
-        padding-left: 84px;
-        margin-left: 80px;
-    }
-    #home::before {
-        width: 290%;
-        top: 0;
-        height: 800px;
-    }
-    #services .box {
-        width: 166%;
-        margin-left: 136px;
-    }
-    #service-container h1{
-        padding-left: 80px;
-        margin-right: -424px;
-    } 
-    #client-section::before {
-        width: 259%;
-        height: 80%;
-    }
-    #client-section h1{
-        padding-left: 80px;
-        margin-right: -424px;
-    }
-    #clients {
-        padding-left: 460px;
-    }
-    .client-item {
-        padding: 100px 0px;
-        margin: 0px -10px; 
-    }
-    #client-section {
-        padding-left: 0px;
-    }
-    #contact h1 {
-        padding-left: 80px;
-        margin-right: -424px;
-    }
-    #contact{
-        padding-left: 0px;
-    }
-    #contact::before{
-        width: 259%;
-    }
-    #contact-box {
-        margin-right: -490px;
-        padding-left: 15px;
-    }
-    #contact-box #submit {
-        margin-left: 135px;
-    }
-    footer {
-        width: 248%;
-    }
-} 
+
